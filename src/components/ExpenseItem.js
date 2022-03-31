@@ -1,25 +1,30 @@
 import '../components/ExpenseItem.css'
 function ExpenseItem(props) {
-    return (
-        <div className = "expense-item">
-          
-                <h2 className="expense-item">{props.title}</h2>
-            
-            <div className = "expense-item__description">
-                <h2 >ExpenseItem</h2>
-            
-            <div className = "expense-item__price">
-                120.99
+    const month = props.date.toLocaleString('en-US', { month: 'long' });
+    const day = props.date.toLocaleString('en-US', { day: '2-digit' });
+   
+    return(
+    <div className="expense-item">
+
+        <div>{month}</div>
+   
+        <div>{day}</div>
+
+        <div className="expense-item__description">
+            <h2 >{props.title}</h2>
+
+            <div className="expense-item__price">
+                {props.amount}
             </div>
-            </div>
-            </div>
+        </div>
+    </div>
            
-        
+    )        
+    
 
 
 
-
-    )
 }
+
 
 export default ExpenseItem
