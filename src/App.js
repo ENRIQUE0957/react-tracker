@@ -23,7 +23,7 @@ function App() {
     }
   ];
   return (
-    <Expenses title ={expenses[0].title} amount = {expenses[0].amount} date = {expenses[0].date} />
+    <Expenses items ={expenses}/>
   )
 }
 
