@@ -22,23 +22,27 @@ const DUMMYDATA = [
     date: new Date(2021, 5, 12),
   }
 ];
-function App() {
+function App(props) {
   const  [expenses,setExpenses]= useState(DUMMYDATA);
+  
 
   const inputExpenseData = (Expenses) =>{
+   
     setExpenses((prevExpenses) =>{
-    
+     
       return [Expenses, ...prevExpenses];
-    
-    
+      
+      
     }); 
     };
+   
+  
   
   
   return (
     <div>
       <NewExpense onAddExpense = {inputExpenseData}/>
-    <Expenses items ={expenses}/>
+    <Expenses items ={expenses} />
     </div>
   )
 }

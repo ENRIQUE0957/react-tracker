@@ -24,7 +24,7 @@ const ExpenseForm = (props) =>{
 
         const expenses = {
             title:NewTitle,
-            amount:newAmount,
+            amount:+newAmount,
             date:new Date(newDate)
         }
         props.onExpenseData(expenses)
@@ -52,7 +52,8 @@ const ExpenseForm = (props) =>{
         </div> 
 
         <div className = "new-expense__actions">
-            <button type = "submit">add expense</button>
+            <button type = "submit">add new expense</button>
+            <button onClick = {props.stopEditing} type = "button">Cancel</button>
         </div>
         </form>
     
